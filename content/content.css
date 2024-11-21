@@ -1,0 +1,105 @@
+.ml-mark {
+  font-weight: bold;
+  transition: 0.5s;
+}
+.ml-mark:hover {
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+.ml-mark.ml-mark--line {
+  color: var(--ml-mark-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.ml-mark.ml-mark--bg {
+  background-color: var(--ml-mark-color);
+}
+
+#ml-highlight-settings {
+  --ml-border-radius: 5px;
+  --ml-shadow-color: #bbb;
+  --ml-transition: 0.3s;
+
+  border-radius: var(--ml-border-radius);
+  position: absolute;
+  background-color: #fff;
+  z-index: 999;
+  opacity: 0;
+  box-shadow: 0 0 10px 0 var(--ml-shadow-color);
+  transition: opacity var(--ml-transition) ease,
+    transform var(--ml-transition) ease;
+}
+#ml-highlight-settings.ml-highlight-settings--show {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+#ml-highlight-settings > .ml-highlight-settings_button {
+  width: 25px;
+  height: 25px;
+  border-radius: var(--ml-border-radius);
+  box-sizing: border-box;
+  padding: 5px;
+  float: left;
+}
+#ml-highlight-settings
+  > .ml-highlight-settings_button.ml-set-color {
+  position: relative;
+}
+#ml-highlight-settings
+  > .ml-highlight-settings_button:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+#ml-highlight-settings
+  > .ml-highlight-settings_button
+  > img {
+  width: 100%;
+}
+
+#ml-highlight-settings
+  > .ml-highlight-settings_button.ml-set-color
+  > .ml-set-color_now-color {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--ml-border-radius);
+}
+
+.ml-set-color > .ml-set-color_color-picker {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 var(--ml-shadow-color);
+  border-radius: var(--ml-border-radius);
+}
+
+.ml-set-color
+  > .ml-set-color_color-picker
+  > .ml-set-color_color-picker_button {
+  padding: 5px 20px;
+  border-radius: var(--ml-border-radius);
+  color: #fff;
+  float: right;
+  margin-top: 10px;
+}
+
+.ml-message {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 40px;
+  border-radius: 5px;
+  color: #fff;
+  z-index: 999;
+}
+.ml-message.ml-message--error {
+  background-color: rgb(226, 84, 84);
+}
+.ml-message.ml-message--success {
+  background-color: rgb(73, 224, 126);
+}

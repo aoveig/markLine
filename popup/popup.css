@@ -1,0 +1,73 @@
+#main {
+  width: 300px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mark-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mark-list_item {
+  border-bottom: 1px solid #eee;
+}
+
+.mark-list_item-title {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mark-list_item-title > span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mark-list_item-title > span:hover {
+  cursor: pointer;
+}
+.mark-list_item-title > img {
+  width: 20px;
+}
+.mark-list_item-title > img:hover {
+  cursor: pointer;
+}
+
+.mark-list_item-details {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mark-list_sub-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+.mark-list_sub-item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.mark-list_sub-item > span {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mark-list_sub-item > img {
+  width: 15px;
+}
